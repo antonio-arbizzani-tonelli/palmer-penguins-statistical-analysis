@@ -74,7 +74,7 @@ Generated files in `data/processed`, `output/figures` and `output/tables` are ex
 
 ## Presentation
 
-The complete presentation is available in [`presentation/palmer-penguins-statistical-analysis.pptx`](presentation/palmer-penguins-statistical-analysis.pptx). It presents the main results from scripts 01–04, with supplementary checks in the appendix.
+The complete presentation is available as a [PDF for online viewing](presentation/palmer-penguins-statistical-analysis.pdf) and as an [editable PowerPoint file](presentation/palmer-penguins-statistical-analysis.pptx). It presents the main results from scripts 01–04, with supplementary checks in the appendix.
 
 ## Statistical scope
 
