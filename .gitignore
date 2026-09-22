@@ -1,0 +1,29 @@
+# R session state
+.RData
+.Rhistory
+.Rproj.user/
+
+# Generated analysis artefacts
+output/figures/*
+!output/figures/.gitkeep
+output/tables/*
+!output/tables/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+
+# Office temporary files
+~$*.pptx
+~$*.docx
+
+# Local temporary files
+tmp/
+.*-build/
+drafts/
+assets/
+
+# Local reference material retained outside the public repository
+archive/
+docs/presentation_notes_it.docx
+docs/presentation_reference.pdf
+Presentazione2.pptx
+crab_age_prediction.pdf
