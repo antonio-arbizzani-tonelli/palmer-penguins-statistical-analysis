@@ -74,9 +74,7 @@ Generated files in `data/processed`, `output/figures` and `output/tables` are ex
 
 ## Presentation
 
-The current four-slide design preview is available in [`presentation/Penguin_Morphometrics_Current_Deck.pptx`](presentation/Penguin_Morphometrics_Current_Deck.pptx). It establishes the typography, colour palette and opening structure for the final deck.
-
-The proposed complete presentation is described in [`presentation/PRESENTATION_PLAN.md`](presentation/PRESENTATION_PLAN.md). The plan links each slide to the relevant script output and explains how the figures should be redesigned for projection.
+The complete presentation is available in [`presentation/palmer-penguins-statistical-analysis.pptx`](presentation/palmer-penguins-statistical-analysis.pptx). It presents the main results from scripts 01–04, with supplementary checks in the appendix.
 
 ## Statistical scope
 

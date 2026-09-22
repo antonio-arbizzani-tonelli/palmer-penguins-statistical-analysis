@@ -121,6 +121,36 @@ progressive_plot <- ggplot(progressive_cv, aes(step, ten_fold_cv_mse)) +
   theme(axis.text.x = element_text(angle = 20, hjust = 1))
 save_ggplot(progressive_plot, "13_progressive_model_cv_mse.png", width = 11, height = 7)
 
+progressive_rmse_plot <- progressive_cv |>
+  dplyr::mutate(
+    predictor = factor(predictor_labels, levels = predictor_labels),
+    rmse = sqrt(ten_fold_cv_mse),
+    group = ifelse(step < 4, "Morphology", "Species and sex")
+  ) |>
+  ggplot(aes(predictor, rmse, fill = group)) +
+  geom_col(width = 0.7, show.legend = FALSE) +
+  geom_text(aes(label = sprintf("%.0f g", rmse)), vjust = -0.35, fontface = "bold", size = 5) +
+  geom_text(
+    aes(y = 20, label = sprintf("MSE %.0fk", ten_fold_cv_mse / 1000)),
+    colour = PROJECT_COLORS[["slate"]],
+    size = 3.8
+  ) +
+  scale_fill_manual(values = c(
+    "Morphology" = "#E3B5AA",
+    "Species and sex" = PROJECT_COLORS[["coral"]]
+  )) +
+  coord_cartesian(ylim = c(0, 440), clip = "off") +
+  labs(x = NULL, y = NULL) +
+  theme_project(base_size = 13) +
+  theme(
+    axis.text.y = element_blank(),
+    axis.ticks = element_blank(),
+    panel.grid = element_blank(),
+    axis.text.x = element_text(face = "bold"),
+    plot.margin = margin(10, 16, 6, 16)
+  )
+save_ggplot(progressive_rmse_plot, "13_progressive_model_cv_rmse.png", width = 15, height = 3.75)
+
 # Two-way ANOVA ----------------------------------------------------------------
 
 anova_model <- aov(body_mass_g ~ species * sex, data = penguins)
