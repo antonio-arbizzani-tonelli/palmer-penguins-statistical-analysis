@@ -36,19 +36,7 @@ scripts/03_validation_and_anova.R
 scripts/04_species_classification.R
 ```
 
-`scripts/run_all.R` runs the complete analysis from the project root.
-
-```r
-source("scripts/run_all.R")
-```
-
-The same command can be run from a terminal:
-
-```text
-Rscript scripts/run_all.R
-```
-
-The code requires R 4.1 or later and the following CRAN packages:
+Use **R 4.5 or later** and install the following CRAN packages before running the scripts:
 
 ```r
 install.packages(c(
@@ -58,6 +46,34 @@ install.packages(c(
 ```
 
 The scripts report missing packages without installing them automatically.
+
+The complete pipeline was verified on **15 October 2026 with R 4.5.0 on Windows 11 x64**, using the package versions below. All four scripts completed, generated the figures and tables, and reproduced the rounded results reported above.
+
+| Package | Tested version |
+| --- | --- |
+| boot | 1.3-31 |
+| car | 3.1-5 |
+| corrplot | 0.95 |
+| dplyr | 1.2.1 |
+| GGally | 2.4.0 |
+| ggplot2 | 4.0.3 |
+| pROC | 1.19.1 |
+| readr | 2.2.0 |
+| tidyr | 1.3.2 |
+
+These versions describe the tested environment. The installation command installs the versions currently available on CRAN rather than pinning them. GGally 2.4.0 requires at least R 4.3.
+
+Run the complete analysis from the project root in R:
+
+```r
+source("scripts/run_all.R")
+```
+
+Or from a terminal:
+
+```text
+Rscript --vanilla scripts/run_all.R
+```
 
 ## Repository structure
 
